@@ -1,0 +1,18 @@
+main
+	InitTimer1
+	InitTimer3
+	InitADC
+		InitTimer3
+	InitDataSend
+		UART2_Init
+			Get_Fosc_kHz
+			UART_Calc_BRG
+	SampleADC
+	SendData
+		IntToStr
+			WordToStr
+		UART2_Write_Text
+			UART2_Write
+		UART2_Write
+ADC_complete
+Timer1Interrupt
